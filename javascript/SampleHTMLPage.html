@@ -1,0 +1,50 @@
+<html>
+<head>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+    <script type="text/javascript">
+
+        // Step 1 of 6: Enter client id, provided by SLI
+        var SLI_CLIENT_ID = xxxx;
+        // Step 2 of 6: Enter site id, provided by SLI
+        var SLI_SITE_ID = xxxx;
+        // Step 3 of 6: Enter strategy id, provided by SLI e.g. 5570c93c0cf27fb4c007e9da
+        var SLI_STRATEGY_ID = "xxxxxxxxxxxxx";
+        // Step 4 of 6: input SKUs for this strategy, if applicable (eg. bought-also-bought)
+        var SLI_STRATEGY_INPUT_SKUS = ["congi-2505-0328"];
+        // Step 5 of 6: Enter number of recommendations to show
+        var SLI_RECOMMENDATION_REQUEST_COUNT = 4;
+        // Step 6 of 6: Enter the fields required for recommendation display
+        var SLI_PRODUCT_ATTRIBUTES = ["image", "url", "price", "title", "sku"];
+
+        // JSONP callback function name
+        var SLI_JSONP_CALLBACK = "recommendationsResponse";
+        // id of div to insert recommendations into (<div id="xxx">)
+        var SLI_RECOMMENDATIONS_DIV_ID = "recommendations";
+
+    </script>
+    <script type="text/javascript" src="lr-api.js"></script>
+    <style type="text/css">
+        body {
+            font-family: arial;
+        }
+
+        div.recommendation {
+            float: left;
+            text-align: center;
+            padding: 20px;
+            width: 200px;
+        }
+
+        div.recommendation a {
+            font-weight: bold;
+        }
+
+        div.recommendation img {
+            height: 150px;
+        }
+    </style>
+</head>
+<body>
+<div id='recommendations'></div>
+</body>
+</html>

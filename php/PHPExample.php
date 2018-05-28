@@ -24,7 +24,7 @@ $SLI_PRODUCT_ATTRIBUTES = "&att=image&att=url&att=price&att=title&att=sku";
 // if the whole site is on www.<mysite>.com then use www.<mysite>.com
 // but if some pages are served on subdomains then this needs to
 // be the highest common domain.
-$SLI_DOMAIN = ".mysite.com";
+$SLI_DOMAIN = "mysite.com";
 
 
 $cookieSuffix = fletcher32($SLI_DOMAIN);
